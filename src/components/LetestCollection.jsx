@@ -4,7 +4,7 @@ import Title from "./Title"
 import ProductsItems from "./ProductsItems"
 
 const LetestCollection = () => {
-    const { products } = useContext(ShopContext)
+    const { products, currency } = useContext(ShopContext)
     const [latestProducts, setLatestProducts] = useState([]);
     useEffect(() => {
         setLatestProducts(products.slice(0, 10))
@@ -22,9 +22,11 @@ const LetestCollection = () => {
                 {/* Rendreing Products */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6" >
                     {
-                        latestProducts.map((item, index) => (
-                            <ProductsItems key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
-                        ))
+                        latestProducts.map((item, index) => {
+                            return (
+                                <ProductsItems currency={currency} key={index} id={item._id} image={item.image[0]} name={item.name} price={item.price} />
+                            )
+                        })
                     }
                 </div>
             </div>

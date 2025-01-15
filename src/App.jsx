@@ -10,6 +10,7 @@ import Orders from "./pages/Orders"
 import Cart from "./pages/Cart"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import SearchBar from "./components/SearchBar"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
 
       <div className="px-4 sm:px-[4vw] md:px-[7vw] lg:px-[9vw]">
         <Navbar />
+        <SearchBar />
 
         <Routes>
           <Route path="/" element={<Home />} />

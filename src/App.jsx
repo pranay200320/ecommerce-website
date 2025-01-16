@@ -17,10 +17,12 @@ function App() {
     <>
 
       <div className="px-4 sm:px-[4vw] md:px-[7vw] lg:px-[9vw]">
+        {/* we can add this navbar outside because we can see navbaar in all pages*/}
         <Navbar />
         <SearchBar />
 
         <Routes>
+          {/* we can define the path and element property here */}
           <Route path="/" element={<Home />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/about" element={<About />} />

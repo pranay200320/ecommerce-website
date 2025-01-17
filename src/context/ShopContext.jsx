@@ -7,6 +7,11 @@ const ShopContextProvider = (props) => {
   const delivery_fee = 10;
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
+  const [cartItems, setCartItems] = useState({});
+
+  const addTpCart = async (itemId,size) =>{
+    let cart
+  }
 
   const value = {
     products,
